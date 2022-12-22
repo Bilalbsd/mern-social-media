@@ -1,4 +1,5 @@
 const router = require('express').Router()
+const postController = require('../controllers/postController')
 
 // post CRUD
 router.post('/', postController.createPost)
@@ -8,7 +9,7 @@ router.delete('/:id', postController.deletePost)
 
 // post likes
 router.patch('/like/:id', postController.likePost)
-router.patch('/unlike/:id', postController.unlikePost)
+router.patch('/unlike/:id', postController.unLikePost)
 
 // post comments
 router.patch('/comment/:id', postController.commentPost)

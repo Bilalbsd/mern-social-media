@@ -57,33 +57,6 @@ module.exports.deletePost = (req, res) => {
   })
 }
 
-// module.exports.likePost = async (req, res) => {
-//   if (!ObjectID.isValid(req.params.id))
-//     return res.status(400).send("Unknown ID : " + req.params.id)
-
-//   try {
-//     await PostModel.findByIdAndUpdate(
-//       req.params.id,
-//       {
-//         $addToSet: { likers: req.body.id },
-//       },
-//       { new: true })
-//       .then((data) => res.send(data))
-//       .catch((err) => res.status(500).send({ message: err }))
-
-//     await UserModel.findByIdAndUpdate(
-//       req.body.id,
-//       {
-//         $addToSet: { likes: req.params.id },
-//       },
-//       { new: true })
-//       .then((data) => res.send(data))
-//       .catch((err) => res.status(500).send({ message: err }))
-//   } catch (err) {
-//     return res.status(400).send(err)
-//   }
-// }
-
 module.exports.likePost = async (req, res) => {
 
   if (!ObjectID.isValid(req.params.id) || !ObjectID.isValid(req.body.id))
