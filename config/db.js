@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 require('dotenv').config({ path: '.env' })
 
-main().catch(err => console.log(err));
 main().then(() => console.log('Connected to MongoDB'))
+main().catch(err => console.log(err));
 
 async function main() {
     mongoose.set('strictQuery', true)
