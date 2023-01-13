@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import About from './pages/About';
 import Home from './pages/Home';
 import Profil from './pages/Profil';
 
@@ -11,7 +12,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profil" element={<Profil />} />
-        </Routes>
+          <Route path="/about" element={<About />} />
       </BrowserRouter>
     </AppContext.Provider>
   );
