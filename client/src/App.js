@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from './pages/About';
 import Home from './pages/Home';
 import Profil from './pages/Profil';
 
-const App = () => {
-  const [uid, setUid] = useState();
-  
+const App = () => {  
   return (
-    <AppContext.Provider value={uid}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -16,7 +13,6 @@ const App = () => {
           <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
-    </AppContext.Provider>
   );
 };
 
