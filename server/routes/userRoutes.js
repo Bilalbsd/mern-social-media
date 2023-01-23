@@ -5,7 +5,6 @@ const userController = require('../controllers/userController')
 // authentification
 router.post('/register', authController.signUp)
 router.post('/login', authController.signIn)
-router.get('/logout', authController.logout)
 
 // user CRUD
 router.get('/', userController.getAllUsers)
