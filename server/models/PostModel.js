@@ -15,7 +15,11 @@ const PostSchema = new Schema({
         required: true
     },
     comments: {
-        type: [{ commenterId: String, commenterUsername: String, text: String, timestamp: Number }],
+        type: [{
+            commenterId: String,
+            commenterUsername: String,
+            text: String, timestamp: Number
+        }],
         required: true
     }
 },

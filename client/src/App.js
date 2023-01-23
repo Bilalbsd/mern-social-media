@@ -6,6 +6,7 @@ import Profil from './pages/Profil';
 
 const App = () => {
   const [uid, setUid] = useState();
+  
   return (
     <AppContext.Provider value={uid}>
       <BrowserRouter>
